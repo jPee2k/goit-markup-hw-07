@@ -1,0 +1,38 @@
+.intro {
+  background-color: $bg-color;
+
+  .container {
+    max-width: 1600px;
+    text-align: center;
+
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    background-size: auto, cover;
+    background:
+      linear-gradient(to right, $intro-filter, $intro-filter),
+      url("../images/intro/bg.jpg") no-repeat center;
+  }
+
+  .container > *:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &.section {
+    padding: 0;
+  }
+}
+
+.intro__title {
+  width: 696px;
+
+  text-align: center;
+  margin: 0 auto;
+
+  font-size: 44px;
+  line-height: 1.363;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $title-color;
+}

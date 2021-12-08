@@ -1,0 +1,16 @@
+.team {
+  background-color: $team-bg-color;
+
+  .services__title {
+    margin-top: 0;
+  }
+}
+
+.team__list {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fill, 270px);
+  justify-content: center;
+
+  @include reset-list;
+}

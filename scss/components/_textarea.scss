@@ -1,0 +1,19 @@
+.textarea {
+  padding: 12px 16px;
+
+  resize: none;
+  border-radius: 4px;
+  border: 1px solid $input-border-color;
+
+  &:focus {
+    border-color: $main-color;
+    transition:
+      border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &::placeholder {
+    font-size: 12px;
+    letter-spacing: 0.03em;
+    color: $placeholder-color;
+  }
+}

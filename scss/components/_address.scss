@@ -1,0 +1,22 @@
+.address__list {
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  font-style: normal;
+
+  @include reset-list;
+
+  .contacts__link {
+    padding: 0;
+    line-height: inherit;
+  }
+}
+
+.address__list > *:not(:last-child) {
+  margin-bottom: 7px;
+}
+
+.address__main {
+  line-height: inherit;
+  color: $title-color;
+  text-decoration: none;
+}

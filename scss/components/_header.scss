@@ -1,0 +1,14 @@
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid $border-color;
+}
+
+.header .container {
+  @include flex-center;
+  row-gap: 50px;
+}
+
+.header__logo {
+  margin-right: 93px;
+}

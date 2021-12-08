@@ -1,0 +1,50 @@
+.advantages.section {
+  padding-bottom: calc(94px / 2);
+}
+
+.advantages__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  grid-column-gap: 30px;
+  grid-row-gap: 15px;
+
+  @include reset-list;
+}
+
+.advantages__item {
+  outline-offset: 5px;
+}
+
+.advantages__item > * {
+  margin: 0;
+}
+
+.advantages__item > *:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.advantages__title {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.advantages__description {
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: $address-color;
+}
+
+.advantages__img {
+  @include flex-center;
+
+  height: 120px;
+
+  border-radius: 4px;
+  background-color: $team-bg-color;
+}
+
+.item-advantages .advantages__img {
+  margin-bottom: 30px;
+}

@@ -1,0 +1,31 @@
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+
+  @include reset-list;
+}
+
+.filter__button {
+  min-height: 38px;
+  width: auto;
+
+  font-weight: 500;
+  line-height: 1.625;
+  letter-spacing: 0.03em;
+
+  color: inherit;
+  background-color: $team-bg-color;
+
+  &--active,
+  &:hover,
+  &:focus-visible {
+    background-color: $main-color;
+    color: $title-color;
+    box-shadow:
+      0 3px 1px rgba(0, 0, 0, 0.1),
+      0 1px 2px rgba(0, 0, 0, 0.08),
+      0 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
