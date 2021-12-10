@@ -1,10 +1,13 @@
 .navigation__list {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 50px;
-  row-gap: 15px;
+  gap: 50px;
 
   @include reset-list;
+
+  & > * {
+    margin: auto;
+  }
 }
 
 .navigation__link {
@@ -31,12 +34,38 @@
     content: "";
     position: absolute;
     left: 0;
-    bottom: -27px;
+    bottom: -28px;
 
     height: 4px;
     width: 100%;
 
     border-radius: 2px;
     background-color: $main-color;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .navigation__list {
+    column-gap: 6.5vw;
+  }
+}
+
+@media screen and (max-width: $tablet-sm) {
+  .navigation__list {
+    display: block;
+
+    & > *:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  .navigation__link {
+    font-size: 40px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .navigation__link--active::after {
+    display: none;
   }
 }

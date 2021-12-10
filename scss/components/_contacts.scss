@@ -5,8 +5,6 @@
   row-gap: 15px;
 
   @include reset-list;
-
-  margin-left: auto;
 }
 
 .contacts__link {
@@ -30,5 +28,48 @@
 
   svg {
     margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: $desktop-sm) {
+  .header {
+    .contacts {
+      flex-direction: column;
+      row-gap: 10px;
+    }
+
+    .contacts__link {
+      margin-top: -6px;
+      margin-bottom: -6px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .header .contacts__link {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: $tablet-sm) {
+  .header .contacts {
+    row-gap: 32px;
+    margin-top: auto;
+  }
+
+  .header .contacts__link {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+
+    font-size: calc(100vw * 0.07);
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+
+    svg {
+      display: none;
+    }
   }
 }

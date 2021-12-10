@@ -14,3 +14,19 @@
 
   @include reset-list;
 }
+
+@media screen and (max-width: $tablet) {
+  .team {
+    .card__wrapper {
+      padding-bottom: 24px;
+    }
+
+    .card__img  {
+      width: 100%;
+    }
+  }
+
+  .team__list {
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  }
+}

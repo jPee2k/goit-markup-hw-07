@@ -25,3 +25,14 @@
     border-color: $main-color;
   }
 }
+
+@media screen and (max-width: $tablet) {
+  .clients__list li {
+    flex-grow: 1;
+  }
+
+  .clients__link {
+    min-width: 170px;
+    width: auto;
+  }
+}

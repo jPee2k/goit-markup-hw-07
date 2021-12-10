@@ -20,3 +20,17 @@
   color: $title-color;
   text-decoration: none;
 }
+
+@media screen and (max-width: $tablet) {
+  .address .contacts__link,
+  .address .address__main {
+    font-size: 14px;
+    line-height: 1.714;
+  }
+
+  .address__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

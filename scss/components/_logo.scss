@@ -7,6 +7,11 @@
   letter-spacing: 0.03em;
   color: $logo-color;
   text-decoration: none;
+
+  &:not([href]) {
+    pointer-events: none;
+    user-select: none;
+  }
 }
 
 .logo__prefix {

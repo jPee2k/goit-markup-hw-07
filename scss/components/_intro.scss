@@ -24,7 +24,7 @@
 }
 
 .intro__title {
-  width: 696px;
+  max-width: 696px;
 
   text-align: center;
   margin: 0 auto;
@@ -35,4 +35,28 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: $title-color;
+}
+
+@media screen and (max-width: $tablet) {
+  .intro .container {
+    padding-top: 118px;
+    padding-bottom: 118px;
+    background:
+      linear-gradient(to right, $intro-filter, $intro-filter),
+      url("../images/intro/bg-768.jpg") no-repeat center;
+  }
+
+  .intro__title {
+    max-width: 360px;
+    font-size: 26px;
+    line-height: 1.615;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .intro .container {
+    background:
+      linear-gradient(to right, $intro-filter, $intro-filter),
+      url("../images/intro/bg-480.jpg") no-repeat center;
+  }
 }

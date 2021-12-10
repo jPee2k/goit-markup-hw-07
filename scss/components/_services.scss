@@ -2,7 +2,7 @@
   padding-top: 0;
 
   &.section {
-    padding-top: calc(94px / 2);
+    padding-top: calc(#{$section-padding} / 2);
   }
 }
 
@@ -59,4 +59,16 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+@media screen and (max-width: $tablet) {
+  .services.section {
+    display: none;
+    padding-top: calc(#{$section-padding-tablet} / 2);
+  }
+
+  .services__title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
 }

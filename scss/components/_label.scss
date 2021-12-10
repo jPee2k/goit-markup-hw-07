@@ -3,3 +3,12 @@
   color: $address-color;
   user-select: none;
 }
+
+.label__text {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.label__wrapper {
+  position: relative;
+}

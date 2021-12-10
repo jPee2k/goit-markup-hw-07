@@ -1,5 +1,5 @@
 .advantages.section {
-  padding-bottom: calc(94px / 2);
+  padding-bottom: calc(#{$section-padding} / 2);
 }
 
 .advantages__list {
@@ -47,4 +47,19 @@
 
 .item-advantages .advantages__img {
   margin-bottom: 30px;
+}
+
+
+@media screen and (max-width: $tablet) {
+  .advantages.section {
+    padding-bottom: $section-padding-tablet;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .advantages {
+    .advantages__title {
+      text-align: center;
+    }
+  }
 }

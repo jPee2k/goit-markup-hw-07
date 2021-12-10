@@ -1,4 +1,11 @@
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+}
+
+@media screen and (max-width: $tablet) {
+  .section {
+    padding-top: $section-padding-tablet;
+    padding-bottom: $section-padding-tablet;
+  }
 }
