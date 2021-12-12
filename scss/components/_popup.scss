@@ -9,6 +9,8 @@
   width: 100vw;
   height: 100vh;
 
+  overflow-y: auto;
+
   background-color: rgba(0, 0, 0, 0.2);
 
   &.is-hidden {
@@ -28,6 +30,7 @@
 
 .popup__body {
   position: relative;
+  margin: auto;
 
   width: 528px;
   padding: 40px;
