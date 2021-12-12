@@ -1,5 +1,6 @@
-(() => {
+const modalApp = () => {
   const refs = {
+    body: document.querySelector('body'),
     openModalBtn: document.querySelector('[data-modal-open]'),
     closeModalBtn: document.querySelector('[data-modal-close]'),
     modal: document.querySelector('[data-modal]'),
@@ -7,23 +8,34 @@
     form: document.querySelector('[data-form]'),
   };
 
-  function toggleModal() {
+  const closeModal = () => {
+    refs.modal.classList.add('is-hidden');
+    refs.form?.reset();
+    refs.body.style.overflowY = 'auto';
+  };
+
+  const toggleModal = () => {
     refs.modal.classList.toggle('is-hidden');
     if (!refs.modal.classList.contains('is-hidden')) {
       refs.focusInput?.focus();
+      refs.body.style.overflowY = 'hidden';
     } else {
-      refs.form?.reset();
+      closeModal();
     }
-  }
-
-  function closeModal(evt) {
-    if (evt.key === 'Escape' || evt.target.getAttribute('data-modal') === '') {
-      refs.modal.classList.add('is-hidden');
-    }
-  }
+  };
 
   refs.openModalBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
-  refs.modal.addEventListener('click', closeModal);
-  document.addEventListener('keyup', closeModal);
-})();
+  refs.modal.addEventListener('click', (evt) => {
+    if (evt.target.getAttribute('data-modal') === '') {
+      closeModal();
+    }
+  });
+  document.addEventListener('keyup', (evt) => {
+    if (evt.key === 'Escape') {
+      closeModal();
+    }
+  });
+};
+
+modalApp();
