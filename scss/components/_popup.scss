@@ -176,3 +176,31 @@
   display: block;
   margin: 0 auto;
 }
+
+@media screen and (max-width: $tablet) {
+  .popup__body {
+    width: 450px;
+  }
+
+  .popup__title {
+    line-height: 1.5;
+  }
+
+  .popup__label--terms {
+    font-size: 12px;
+    line-height: initial;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .popup__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    padding: 20px;
+  }
+}

@@ -11,6 +11,10 @@
     font-size: 12px;
     letter-spacing: 0.03em;
     color: $placeholder-color;
+
+    @media screen and (max-width: $tablet) {
+      font-size: 14px;
+    }
   }
 
   &:focus {

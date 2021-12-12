@@ -126,23 +126,40 @@
           <div class="item-services__wrapper">
             <h3 class="item-services__title">Десктопные приложения</h3>
           </div>
-          <img class="item-services__img" width="370" src="images/services/img.jpg" title="Десктопная разработка"
-               alt="Специалист печатает код на клавиатуре в уютной обстановке">
+          <img class="item-services__img" width="370" height="294" title="Десктопная разработка"
+               alt="Специалист печатает код на клавиатуре в уютной обстановке"
+               srcset="images/services/img.jpg    1x,
+                       images/services/img@2x.jpg 2x,
+                       images/services/img@3x.jpg 3x,
+                       images/services/img@4x.jpg 4x"
+               src="images/services/img.jpg"
+          />
         </li>
         <li class="services__item item-services">
           <div class="item-services__wrapper">
             <h3 class="item-services__title">Мобильные приложения</h3>
           </div>
-          <img class="item-services__img" width="370" src="images/services/img_2.jpg"
-               title="Разработка под мобильные платформы"
-               alt="Специалист исследует адаптивность сайта на мобильном устройстве">
+          <img class="item-services__img" width="370" title="Разработка под мобильные платформы"
+               alt="Специалист исследует адаптивность сайта на мобильном устройстве"
+               srcset="images/services/img_2.jpg    1x,
+                       images/services/img_2@2x.jpg 2x,
+                       images/services/img_2@3x.jpg 3x,
+                       images/services/img_2@4x.jpg 4x"
+               src="images/services/img_2.jpg"
+          />
         </li>
         <li class="services__item item-services">
           <div class="item-services__wrapper">
             <h3 class="item-services__title">Дизайнерские решения</h3>
           </div>
-          <img class="item-services__img" width="370" src="images/services/img_3.jpg" title="Дизайн любой сложности"
-               alt="Скрупулезный выбор цвета для конкретных ситуаций">
+          <img class="item-services__img" width="370" height="294" title="Дизайн любой сложности"
+               alt="Скрупулезный выбор цвета для конкретных ситуаций"
+               srcset="images/services/img_3.jpg    1x,
+                       images/services/img_3@2x.jpg 2x,
+                       images/services/img_3@3x.jpg 3x,
+                       images/services/img_3@4x.jpg 4x"
+               src="images/services/img_3.jpg"
+          />
         </li>
       </ul>
     </div>
@@ -152,11 +169,19 @@
     <div class="container">
       <h2 class="services__title">Наша команда</h2>
       <ul class="team__list">
-<!--        TODO img srcset / optimize img-->
         <li class="team__item card">
-          <img class="card__img" width="270" src="images/team/product_designer.jpg" title="Игорь Демьяненко"
-               alt="Продуктовый дизайнер">
-          <div class="card__wrapper">
+          <img class="card__img" width="270" height="260" title="Игорь Демьяненко" alt="Продуктовый дизайнер"
+               srcset="images/team/product_designer.jpg    270w,
+                       images/team/product_designer@2x.jpg 540w,
+                       images/team/product_designer@3x.jpg 810w,
+                       images/team/product_designer@4x.jpg 1080w"
+               src="images/team/product_designer.jpg"
+               sizes="(min-width: 1200px) 25vw,
+                      (min-width: 900px) 33vw,
+                      (min-width: 600px) 50vw,
+                      100wv"
+          />
+          <div class="card__info">
             <h3 class="card__title">Игорь Демьяненко</h3>
             <p class="card__subtitle" lang="en">Product Designer</p>
             <ul class="social__list">
@@ -188,9 +213,18 @@
           </div>
         </li>
         <li class="team__item card">
-          <img class="card__img" width="270" src="images/team/frontend_developer.jpg" title="Ольга Репина"
-               alt="Фронтэнд разработчик">
-          <div class="card__wrapper">
+          <img class="card__img" width="270" height="260" title="Ольга Репина" alt="Фронтэнд разработчик"
+               srcset="images/team/frontend_developer.jpg    270w,
+                       images/team/frontend_developer@2x.jpg 540w,
+                       images/team/frontend_developer@3x.jpg 810w,
+                       images/team/frontend_developer@4x.jpg 1080w"
+               src="images/team/frontend_developer.jpg"
+               sizes="(min-width: 1200px) 25vw,
+                      (min-width: 900px) 33vw,
+                      (min-width: 600px) 50vw,
+                      100wv"
+          />
+          <div class="card__info">
             <h3 class="card__title">Ольга Репина</h3>
             <p class="card__subtitle" lang="en">Frontend Developer</p>
             <ul class="social__list">
@@ -222,8 +256,18 @@
           </div>
         </li>
         <li class="team__item card">
-          <img class="card__img" width="270" src="images/team/marketing.jpg" title="Николай Тарасов" alt="Маркетолог">
-          <div class="card__wrapper">
+          <img class="card__img" width="270" height="260" title="Николай Тарасов" alt="Маркетолог"
+               srcset="images/team/marketing.jpg    270w,
+                       images/team/marketing@2x.jpg 540w,
+                       images/team/marketing@3x.jpg 810w,
+                       images/team/marketing@4x.jpg 1080w"
+               src="images/team/marketing.jpg"
+               sizes="(min-width: 1200px) 25vw,
+                      (min-width: 900px) 33vw,
+                      (min-width: 600px) 50vw,
+                      100wv"
+          />
+          <div class="card__info">
             <h3 class="card__title">Николай Тарасов</h3>
             <p class="card__subtitle" lang="en">Marketing</p>
             <ul class="social__list">
@@ -255,9 +299,18 @@
           </div>
         </li>
         <li class="team__item card">
-          <img class="card__img" width="270" src="images/team/ui_designer.jpg" title="Михаил Ермаков"
-               alt="Дизайнер интерфейсов">
-          <div class="card__wrapper">
+          <img class="card__img" width="270" height="260" title="Николай Тарасов" alt="Маркетолог"
+               srcset="images/team/ui_designer.jpg    270w,
+                       images/team/ui_designer@2x.jpg 540w,
+                       images/team/ui_designer@3x.jpg 810w,
+                       images/team/ui_designer@4x.jpg 1080w"
+               src="images/team/ui_designer.jpg"
+               sizes="(min-width: 1200px) 25vw,
+                      (min-width: 900px) 33vw,
+                      (min-width: 600px) 50vw,
+                      100wv"
+          />
+          <div class="card__info">
             <h3 class="card__title">Михаил Ермаков</h3>
             <p class="card__subtitle" lang="en">UI Designer</p>
             <ul class="social__list">
@@ -447,6 +500,6 @@
 </div>
 
 <script defer type="module" src="./js/menu.js"></script>
-<script defer src="./js/modal.js"></script>
+<script defer type="module" src="./js/modal.js"></script>
 </body>
 </html>

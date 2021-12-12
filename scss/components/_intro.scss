@@ -12,6 +12,14 @@
     background:
       linear-gradient(to right, $intro-filter, $intro-filter),
       url("../images/intro/bg.jpg") no-repeat center;
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background:
+        linear-gradient(to right, $intro-filter, $intro-filter),
+        url("../images/intro/bg@2x.jpg") no-repeat center;
+    }
   }
 
   .container > *:not(:last-child) {
@@ -44,6 +52,14 @@
     background:
       linear-gradient(to right, $intro-filter, $intro-filter),
       url("../images/intro/bg-768.jpg") no-repeat center;
+
+    @media screen and (min-device-pixel-ratio: 2),
+           screen and (min-resolution: 192dpi),
+           screen and (min-resolution: 2dppx) {
+      background:
+        linear-gradient(to right, $intro-filter, $intro-filter),
+        url("../images/intro/bg-768@2x.jpg") no-repeat center;
+    }
   }
 
   .intro__title {
@@ -58,5 +74,13 @@
     background:
       linear-gradient(to right, $intro-filter, $intro-filter),
       url("../images/intro/bg-480.jpg") no-repeat center;
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background:
+        linear-gradient(to right, $intro-filter, $intro-filter),
+        url("../images/intro/bg-480@2x.jpg") no-repeat center;
+    }
   }
 }
