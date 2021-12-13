@@ -5,6 +5,7 @@
 .advantages__list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  justify-content: center;
   grid-column-gap: 30px;
   grid-row-gap: 15px;
 
@@ -20,7 +21,7 @@
 }
 
 .advantages__item > *:not(:last-child) {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .advantages__title {
@@ -45,7 +46,7 @@
   background-color: $team-bg-color;
 }
 
-.item-advantages .advantages__img {
+.advantages__item .advantages__img {
   margin-bottom: 30px;
 }
 
@@ -57,9 +58,13 @@
 }
 
 @media screen and (max-width: $mobile) {
-  .advantages {
-    .advantages__title {
-      text-align: center;
-    }
+  .advantages .advantages__title {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: $mobile) and (max-width: $tablet - 1) {
+  .advantages__list {
+    grid-template-columns: 450px;
   }
 }
