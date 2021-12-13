@@ -18,10 +18,6 @@
   color: $title-color;
 }
 
-.footer__column {
-  width: 231px;
-}
-
 @media screen and (max-width: $desktop) {
   .footer .container > * {
     margin: auto;
@@ -39,6 +35,8 @@
 
   .footer__column {
     text-align: center;
+    flex-basis: calc((100% - 4 * 15px) / 2);
+    min-width: 230px;
   }
 
   .footer__logo {
