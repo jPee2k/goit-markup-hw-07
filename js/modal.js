@@ -8,19 +8,25 @@ const modalApp = () => {
     form: document.querySelector('[data-form]'),
   };
 
+  const isOpened = () => !refs.modal.classList.contains('is-hidden');
+  const isLessThan = (width = 480) => refs.body.clientWidth < width;
   const closeModal = () => {
     refs.modal.classList.add('is-hidden');
-    refs.form?.reset();
     refs.body.style.overflowY = 'auto';
+    refs.form?.reset();
   };
 
   const toggleModal = () => {
     refs.modal.classList.toggle('is-hidden');
-    if (!refs.modal.classList.contains('is-hidden')) {
+
+    if (isOpened()) {
       refs.focusInput?.focus();
-      refs.body.style.overflowY = 'hidden';
     } else {
       closeModal();
+    }
+
+    if (isOpened() && isLessThan()) {
+      refs.body.style.overflowY = 'hidden';
     }
   };
 
@@ -34,6 +40,13 @@ const modalApp = () => {
   document.addEventListener('keyup', (evt) => {
     if (evt.key === 'Escape') {
       closeModal();
+    }
+  });
+  window.addEventListener('resize', () => {
+    if (isOpened() && isLessThan()) {
+      refs.body.style.overflowY = 'hidden';
+    } else {
+      refs.body.style.overflowY = 'auto';
     }
   });
 };
