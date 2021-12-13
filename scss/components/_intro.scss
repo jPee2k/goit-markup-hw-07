@@ -8,10 +8,10 @@
     padding-top: 200px;
     padding-bottom: 200px;
 
-    background-size: auto, cover;
     background:
       linear-gradient(to right, $intro-filter, $intro-filter),
       url("../images/intro/bg.jpg") no-repeat center;
+    background-size: cover;
 
     @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
@@ -19,6 +19,7 @@
       background:
         linear-gradient(to right, $intro-filter, $intro-filter),
         url("../images/intro/bg@2x.jpg") no-repeat center;
+      background-size: cover;
     }
   }
 
@@ -46,19 +47,25 @@
 }
 
 @media screen and (max-width: $tablet) {
-  .intro .container {
-    padding-top: 118px;
-    padding-bottom: 118px;
+  .intro {
+    .container {
+      padding-top: 118px;
+      padding-bottom: 118px;
+      background: none;
+    }
+
     background:
       linear-gradient(to right, $intro-filter, $intro-filter),
       url("../images/intro/bg-768.jpg") no-repeat center;
+    background-size: cover;
 
     @media screen and (min-device-pixel-ratio: 2),
-           screen and (min-resolution: 192dpi),
-           screen and (min-resolution: 2dppx) {
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
       background:
         linear-gradient(to right, $intro-filter, $intro-filter),
         url("../images/intro/bg-768@2x.jpg") no-repeat center;
+      background-size: cover;
     }
   }
 
@@ -70,10 +77,11 @@
 }
 
 @media screen and (max-width: $mobile) {
-  .intro .container {
+  .intro {
     background:
       linear-gradient(to right, $intro-filter, $intro-filter),
       url("../images/intro/bg-480.jpg") no-repeat center;
+    background-size: cover;
 
     @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
@@ -81,6 +89,7 @@
       background:
         linear-gradient(to right, $intro-filter, $intro-filter),
         url("../images/intro/bg-480@2x.jpg") no-repeat center;
+      background-size: cover;
     }
   }
 }
