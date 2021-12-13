@@ -4,29 +4,34 @@
   .services__title {
     margin-top: 0;
   }
+
+  .card__img {
+    width: auto;
+    margin: 0 auto;
+  }
 }
 
 .team__list {
   display: grid;
-  grid-gap: 30px;
-  grid-template-columns: repeat(auto-fill, 270px);
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   justify-content: center;
+  grid-gap: 30px;
 
   @include reset-list;
 }
 
 @media screen and (max-width: $tablet) {
-  .team {
-    .card__wrapper {
-      padding-bottom: 24px;
-    }
+  .team .card__info {
+    padding-bottom: 24px;
+  }
+}
 
-    .card__img  {
+@media screen and (min-width: $mobile) and (max-width: $tablet - 1) {
+  .team__list {
+    grid-template-columns: 450px;
+
+    .card__img {
       width: 100%;
     }
-  }
-
-  .team__list {
-    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   }
 }
