@@ -46,11 +46,22 @@
   color: $title-color;
 }
 
+@media screen and (max-width: $desktop) {
+  .intro .container {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+
+  .intro__title {
+    max-width: 360px;
+    font-size: 26px;
+    line-height: 1.615;
+  }
+}
+
 @media screen and (max-width: $tablet) {
   .intro {
     .container {
-      padding-top: 118px;
-      padding-bottom: 118px;
       background: none;
     }
 
@@ -67,12 +78,6 @@
         url("../images/intro/bg-768@2x.jpg") no-repeat center;
       background-size: cover;
     }
-  }
-
-  .intro__title {
-    max-width: 360px;
-    font-size: 26px;
-    line-height: 1.615;
   }
 }
 
