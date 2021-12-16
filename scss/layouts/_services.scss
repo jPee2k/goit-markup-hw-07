@@ -61,7 +61,7 @@
   text-overflow: ellipsis;
 }
 
-@media screen and (max-width: $tablet) {
+@media screen and (max-width: $desktop) {
   .services.section {
     display: none;
     padding-top: calc(#{$section-padding-tablet} / 2);
