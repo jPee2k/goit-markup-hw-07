@@ -1,23 +1,21 @@
 .clients__list {
   @include reset-list;
-  @include flex-center;
-  flex-wrap: wrap;
-  gap: 30px;
+}
+
+.clients__list > *:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .clients__link {
   @include flex-center;
-
-  width: 170px;
-  height: 92px;
+  min-height: 92px;
 
   color: $icons-color;
   border-radius: 4px;
   border: 1px solid $icons-color;
 
-  transition:
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus-visible {
@@ -26,13 +24,42 @@
   }
 }
 
-@media screen and (max-width: $tablet) {
-  .clients__list li {
-    flex-grow: 1;
+@media screen and (min-width: $mobile) {
+  .clients__list {
+    @include flex-center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    max-width: 450px;
+    margin: 0 auto;
+
+    & > *:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
 
-  .clients__link {
-    min-width: 170px;
-    width: auto;
+  .clients__item {
+    flex-basis: calc((100% - 30px) / 2);
+    max-width: 226px;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .clients__list {
+    max-width: 738px;
+  }
+
+  .clients__item {
+    flex-basis: calc((100% - 30px) / 3);
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .clients__list {
+    max-width: initial;
+  }
+
+  .clients__item {
+    flex-basis: 170px;
   }
 }

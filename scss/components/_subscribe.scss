@@ -1,6 +1,6 @@
 .subscribe__form {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   column-gap: 12px;
   row-gap: 20px;
@@ -32,15 +32,9 @@
   gap: 10px;
 }
 
-@media screen and (max-width: $tablet) {
+@media screen and (max-width: $desktop) {
   .footer .subscribe {
-    margin: 0;
-    justify-self: center;
-    flex-grow: 1;
-  }
-
-  .footer .subscribe__form {
-    flex-direction: column;
+    width: 100%;
   }
 
   .footer .subscribe__label {
@@ -50,5 +44,21 @@
   .footer .subscribe__input {
     max-width: 450px;
     width: 100%;
+  }
+}
+
+
+@media screen and (min-width: $desktop) {
+  .footer .subscribe {
+    max-width: initial;
+    width: auto;
+  }
+
+  .footer .subscribe__form {
+    flex-direction: row;
+  }
+
+  .footer .subscribe__input {
+    width: 358px;
   }
 }

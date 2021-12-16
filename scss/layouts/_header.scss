@@ -16,6 +16,11 @@
   .social__list {
     display: none;
   }
+
+  @media screen and (max-width: $desktop-sm) {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
 }
 
 .header__menu {
@@ -46,24 +51,13 @@
   @include v-hidden;
 }
 
-@media screen and (max-width: $desktop-sm) {
-  .header {
-    padding-top: 21px;
-    padding-bottom: 21px;
-
-    .navigation {
+@media screen and (max-width: $desktop) {
+  .header .navigation {
       margin-right: initial;
-    }
   }
 
   .header__logo {
     margin-right: initial;
-  }
-}
-
-@media screen and (max-width: $tablet) {
-  .header .logo {
-    font-size: 24px;
   }
 }
 
